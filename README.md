@@ -37,10 +37,12 @@
 # 스프링 설정
 ### 개발툴 설치
 		스프링 개발 STS(Spring Tool Suite)이나 Eclipse+Spring Plugin 으로 사용
-		Eclipse => help탭 - Install new software => https://spring.io/tools3/sts/all/ 에서 update Sites Eclipse 버젼 확인후 다운로드
+		Eclipse => help탭 - Install new software => https://spring.io/tools3/sts/all/ 
+		에서 update Sites Eclipse 버젼 확인후 다운로드
 	
 ### WorkSpace UTF-8 설정
-		자바 , jsp 개발 코딩마다 인코딩이 달라서 문제가 될 수 있기 때문에 미리 Workspace 의 인코딩을 변경해줌
+		자바 , jsp 개발 코딩마다 인코딩이 달라서 문제가 될 수 있기 때문에 미리 Workspace 의
+		인코딩을 변경해줌
 		Window -> Preferences-> General -> Workspace , Text file encoding 변경
 		Web 탭 -> CSS ,HTML, JSP 모두 인코딩 변경
 	
@@ -74,7 +76,8 @@
 		3) 톰캣 절대경로 설정
 			프로젝트 속성 -Web Project Settings - Path를  / 로 바꿈
 			
-			-서버 생성할때 root 잡히는데 그때 프로젝트 root경로로 생성 (절대경로 바꾸기전에 서버생성하면 그걸로 반영,서버에서 변경해야함)
+			-서버 생성할때 root 잡히는데 그때 프로젝트 root경로로 생성 (절대경로 바꾸기전에 서버생성하면 
+			그걸로 반영,서버에서 변경해야함)
 			
 ### context 설정
 		1)XML
@@ -147,12 +150,20 @@
 
 
 		Maven - scope
-	* compile : 기본영역으로 아무것도 지정되지 않은 경우 사용됨. compile 의존관계에 있는 것은 프로젝트의 모든 클래스에서 사용가능함. 또한, 이와 같은 의존관계는 의존관계에 있는 프로젝트에 포함됨.
-	* provided : compile 과 매우 유사히지만, 실행시 의존관계를 제공하는 JDK나 컨테이너에 대해서 적용됨. 예를 들어, JEE에 대한 웹 어플리케이션을 만드는 경우, 웹 컨테이너가 서블릿 API와 Java EE API관련 클래스들을 제공하기 때문에 provided 영역으로 의존관계가 세팅되어야 함. 이 영역은 컴파일과 테스트의 클래스패스 용으로 사용되며, 자동영역임.
-	* runtime : 의존관계가 컴파일시 필요하지 않지만, 실행시 필요함을 의미함. 실행시와 테스트 클래스패스에 속하지만, 컴파일 클래스패스에는 속하지 않음.
+	* compile : 기본영역으로 아무것도 지정되지 않은 경우 사용됨. compile 의존관계에 있는 것은 프로젝트의 모든 클래스에서 사용가능함. 
+	또한, 이와 같은 의존관계는 의존관계에 있는 프로젝트에 포함됨.
+	* provided : compile 과 매우 유사히지만, 실행시 의존관계를 제공하는 JDK나 컨테이너에 대해서 적용됨. 
+	예를 들어, JEE에 대한 웹 어플리케이션을 만드는 경우, 웹 컨테이너가 서블릿 API와 Java EE API관련 
+	클래스들을 제공하기 때문에 provided 영역으로 의존관계가 세팅되어야 함. 
+	이 영역은 컴파일과 테스트의 클래스패스 용으로 사용되며, 자동영역임.
+	* runtime : 의존관계가 컴파일시 필요하지 않지만, 실행시 필요함을 의미함. 
+	실행시와 테스트 클래스패스에 속하지만, 컴파일 클래스패스에는 속하지 않음.
 	* test : 일반적인 어플리케이션 사용에 대해서는 의존관계가 필요없고, 테스트 컴파일과 실행 시점에만 사용됨.
-	* system : 명시적으로 해당 JAR를 포함하는 것이 제공되어야 한다는 것을 제외하고 provided와 유사함. artifact는 항상 사용가능하며 레파지토리에서 검색하지 않음.
-	* import (Maven 2.0.9 이후에서만 적용) : 이 영역은 <dependencyManagement>에서 pom의 의존관계에 대해서 사용됨. 지정된 POM이 해당 POM의 <dependencyManagement> 영역에 있는 의존관계로 대체됨을 의미함. 이것들이 대체되기 때문에 import 영역의 의존관계들은 실질적으로 의존에 대한 제약에 대해 관여하지 않음.
+	* system : 명시적으로 해당 JAR를 포함하는 것이 제공되어야 한다는 것을 제외하고 provided와 유사함. 
+	artifact는 항상 사용가능하며 레파지토리에서 검색하지 않음.
+	* import (Maven 2.0.9 이후에서만 적용) : 이 영역은 <dependencyManagement>에서 pom의 의존관계에 대해서 사용됨.
+	지정된 POM이 해당 POM의 <dependencyManagement> 영역에 있는 의존관계로 대체됨을 의미함. 
+	이것들이 대체되기 때문에 import 영역의 의존관계들은 실질적으로 의존에 대한 제약에 대해 관여하지 않음.
 		1) Junit
 		
 			(1) Maven으로 할시 테스트중 Assert 클래스 임포트 안됨
@@ -255,7 +266,8 @@
 			Spring - Mybatis-Spring - MyBatis - DB 순으로 연결되어 있음
 			
 			(1) Maven 
-				spring-jdbc/spring-tx : 스프링에서 데이터베이스 처리와 트랜잭션 처리 (MyBatis와 무관해보이지만 안할경우 에러발생)
+				spring-jdbc/spring-tx : 스프링에서 데이터베이스 처리와 트랜잭션 처리 
+				(MyBatis와 무관해보이지만 안할경우 에러발생)
 				mybatis/mybatis-spring: MyBatis와 스프링 연동 라이브러리
 
 				<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
@@ -435,7 +447,8 @@
 	1) 정의 : 
 		A클래스에서 B클래스를 참조하면 강력한 의존성이 생김 => 테스트하기힘들고 유연하지도않음
 		그래서 A클래스에서 B인터페이스로 연결하면,즉 행위를 정의하면 나중에 B클래스만들어서 대입시켜주면됨 => 테스트하기쉽고 유연함
-		예 : 자동차 클래스에 바퀴 인터페이스, 차문 인터페이스 등으로 정의하면 내가 바퀴에 A사 바퀴 클래스, B사 바퀴 클래스를 원하는대로 맞출 수 있음
+		예 : 자동차 클래스에 바퀴 인터페이스, 차문 인터페이스 등으로 정의하면 
+		내가 바퀴에 A사 바퀴 클래스, B사 바퀴 클래스를 원하는대로 맞출 수 있음
 		위에서는 의존성에대해서 설명한것이고 DI 는 그 인터페이스에 클래스를 자동으로 주입시켜주는 모델임 => 얼마나 쉬워지고 간편해지는지 알 수 있음
 	2) 어노테이션
 		(1) @Autowired : bean을 자동 등록
