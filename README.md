@@ -955,5 +955,3 @@
 	3. Read-only 속성
 	4. Rollback-for-예외
 	5. No-rollback-for-예외
-	
-	<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
