@@ -944,14 +944,14 @@
 		- DEFAULT 
 			DB 설정, 기본 격리 수준(기본설정)
 		- SERIALIZABLE
-			가장 높은 격리, 성능 저하의 우려 ㅇ
-		- READ_UNCOMMITED
-			커밋되지 않은 데이터에 대한 읽기를 허용
-		- READ_COMMITED
+			가장 높은 격리, 성능 저하의 우려 ㅇ   
+		- READ_UNCOMMITED    
+			커밋되지 않은 데이터에 대한 읽기를 허용  
+		- READ_COMMITED    
 			커밋된 데이터에 대해 일기 허용
-		- REPEATEABLE_READ
-			동일 필드에 대해 다중 접근 시 모두 동일한 결과를 보장
+		- REPEATEABLE_READ   
+			동일 필드에 대해 다중 접근 시 모두 동일한 결과를 보장    
 			
-	3. Read-only 속성
-	4. Rollback-for-예외
-	5. No-rollback-for-예외
+	3. Read-only 속성  
+	4. Rollback-for-예외  
+	5. No-rollback-for-예외    
